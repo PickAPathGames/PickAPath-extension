@@ -1,0 +1,10 @@
+test.pap
+*.vsix
+node_modules/
+.git_old
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+thumbs.db

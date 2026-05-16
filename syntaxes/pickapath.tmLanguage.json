@@ -1,0 +1,310 @@
+{
+  "scopeName": "source.pickapath",
+  "name": "PickaPath",
+  "patterns": [
+    { "include": "#interpolation" },
+    { "include": "#special-vars" },
+    { "include": "#tags" },
+    { "include": "#meta" },
+    { "include": "#stats-commands" },
+    { "include": "#navigation" },
+    { "include": "#choices" },
+    { "include": "#choices-standalone" },
+    { "include": "#logic-branching" },
+    { "include": "#variables-logic" },
+    { "include": "#math-functions" },
+    { "include": "#collections" },
+    { "include": "#strings-formatting" },
+    { "include": "#save-load" },
+    { "include": "#strings" },
+    { "include": "#formatting" },
+    { "include": "#comments" },
+    { "include": "#plain-text" }
+  ],
+  "repository": {
+    "plain-text": {
+      "name": "text.plain.pickapath",
+      "match": "^\\s*(?![\\-#$]).+$",
+      "captures": {
+        "0": {
+          "patterns": [
+            { "include": "#interpolation" },
+            { "include": "#special-vars" },
+            { "include": "#formatting" }
+          ]
+        }
+      }
+    },
+    "interpolation": {
+      "patterns": [
+        {
+          "match": "(\\$\\$?)\\{([A-Za-z0-9_]+)\\}",
+          "captures": {
+            "1": { "name": "keyword.other.interpolation.pickapath" },
+            "2": { "name": "variable.other.interpolated.pickapath" }
+          }
+        }
+      ]
+    },
+    "formatting": {
+      "patterns": [
+        {
+          "name": "markup.bold.pickapath",
+          "begin": "\\[b\\]",
+          "end": "\\[/b\\]",
+          "patterns": [{ "include": "$self" }]
+        },
+        {
+          "name": "markup.italic.pickapath",
+          "begin": "\\[i\\]",
+          "beginCaptures": { "0": { "name": "punctuation.definition.tag.pickapath" } },
+          "end": "\\[/i\\]",
+          "endCaptures": { "0": { "name": "punctuation.definition.tag.pickapath" } },
+          "patterns": [ { "include": "#interpolation" }, { "include": "#formatting" } ]
+        },
+        {
+          "name": "markup.strikethrough.pickapath",
+          "begin": "\\[s\\]",
+          "beginCaptures": { "0": { "name": "punctuation.definition.tag.pickapath" } },
+          "end": "\\[/s\\]",
+          "endCaptures": { "0": { "name": "punctuation.definition.tag.pickapath" } },
+          "patterns": [ { "include": "#interpolation" }, { "include": "#formatting" } ]
+        },
+        {
+          "name": "markup.underline.pickapath",
+          "begin": "\\[u\\]",
+          "beginCaptures": { "0": { "name": "punctuation.definition.tag.pickapath" } },
+          "end": "\\[/u\\]",
+          "endCaptures": { "0": { "name": "punctuation.definition.tag.pickapath" } },
+          "patterns": [ { "include": "#interpolation" }, { "include": "#formatting" } ]
+        },
+        {
+          "name": "markup.other.color.pickapath",
+          "begin": "\\[color=(#[A-Fa-f0-9]{3,6}|\\w+)\\]",
+          "beginCaptures": {
+            "0": { "name": "punctuation.definition.tag.pickapath" },
+            "1": { "name": "constant.other.color.pickapath" }
+          },
+          "end": "\\[/color\\]",
+          "endCaptures": {
+            "0": { "name": "punctuation.definition.tag.pickapath" }
+          },
+          "contentName": "markup.other.color.content.pickapath",
+          "patterns": [
+            { "include": "#interpolation" },
+            { "include": "#special-vars" },
+            { "include": "#formatting" }
+          ]
+        }
+      ]
+    },
+    "choices-standalone": {
+      "match": "^\\s*(#)(.*)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.keyword.pickapath" },
+        "2": { 
+          "name": "string.unquoted.choice.pickapath",
+          "patterns": [
+            { "include": "#interpolation" },
+            { "include": "#formatting" }
+          ]
+        }
+      }
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.ignore.pickapath",
+          "match": "^\\s*-ignore.*$"
+        }
+      ]
+    },
+    "special-vars": {
+      "patterns": [
+        {
+          "begin": "(@)\\{",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.atvar.pickapath" }
+          },
+          "end": "\\}",
+          "patterns": [
+            { "match": "[^|{}]+", "name": "variable.parameter.pickapath" },
+            { "match": "\\|", "name": "punctuation.separator.pickapath" }
+          ]
+        }
+      ]
+    },
+    "tags": {
+      "patterns": [
+        {
+          "match": "^\\s*(-tag)\\s+([A-Za-z0-9_]+)",
+          "captures": {
+            "1": { "name": "keyword.control.tag.pickapath" },
+            "2": { "name": "entity.name.tag.pickapath" }
+          }
+        }
+      ]
+    },
+    "meta": {
+      "patterns": [
+        {
+          "match": "^\\s*(-(title|author|version|files|cheat_mode|stats|define_goal|reach_goal|global_max_percentage))\\b",
+          "captures": {
+            "1": { "name": "keyword.control.meta.pickapath" }
+          }
+        }
+      ]
+    },
+    "navigation": {
+      "patterns": [
+        {
+          "begin": "^\\s*(-(go|go_and_back|go_back|go_file|next|pause|nl|pic))\\b",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.flow.pickapath" }
+          },
+          "end": "$",
+          "patterns": [
+            { "include": "#interpolation" },
+            { "include": "#numbers" },
+            { "name": "entity.name.tag.pickapath", "match": "\\b[A-Za-z0-9_]+\\b" }
+          ]
+        }
+      ]
+    },
+    "choices": {
+      "patterns": [
+        {
+          "begin": "^\\s*(-(pick|pick_if|pick_once|single_pick|reset_pick))\\b",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.choice.pickapath" }
+          },
+          "end": "^(?=\\S)",
+          "patterns": [
+            {
+              "match": "^\\s*(#)(.*)$",
+              "captures": {
+                "1": { "name": "punctuation.definition.keyword.pickapath" },
+                "2": {
+                  "name": "string.unquoted.choice.pickapath",
+                  "patterns": [
+                    { "include": "#interpolation" },
+                    { "include": "#special-vars" },
+                    { "include": "#formatting" }
+                  ]
+                }
+              }
+            },
+            { "include": "#expressions" },
+            { "include": "#choices" },
+            { "include": "#choices-standalone" }, 
+            { "include": "#logic-branching" },
+            { "include": "#variables-logic" },
+            { "include": "#navigation" },
+            { "include": "#formatting" },
+            { "include": "#comments" },
+            { "include": "#tags" },
+            { "include": "#plain-text" }
+          ]
+        }
+      ]
+    },
+    "logic-branching": {
+      "patterns": [
+        {
+          "begin": "^\\s*(-(if|elseif|else))\\b",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.branch.pickapath" }
+          },
+          "end": "$",
+          "patterns": [{ "include": "#expressions" }]
+        },
+        { "match": "^\\s*(-end)\\b", "name": "keyword.control.branch.pickapath" }
+      ]
+    },
+    "variables-logic": {
+      "patterns": [
+        {
+          "begin": "^\\s*(-(var|mvar|tvar|entropy|user_input|winner|looser|middle|average|range))\\b",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.variables.pickapath" }
+          },
+          "end": "$",
+          "patterns": [{ "include": "#expressions" }]
+        }
+      ]
+    },
+    "math-functions": {
+      "patterns": [
+        {
+          "begin": "^\\s*(-(avg|percent|join_list|top|clamp|unique|count|exists|is_empty|min|max|sum_list|median|stddev|rand_choice|rand_int|round_to|floor|ceil|between|repeat|concat))\\b",
+          "beginCaptures": {
+            "1": { "name": "support.function.pickapath" }
+          },
+          "end": "$",
+          "patterns": [{ "include": "#expressions" }]
+        }
+      ]
+    },
+    "collections": {
+      "patterns": [
+        {
+          "match": "^\\s*(-(list|sort_asc|sort_des|reverse))\\b",
+          "name": "keyword.control.collection.pickapath"
+        }
+      ]
+    },
+    "strings-formatting": {
+      "patterns": [
+        {
+          "match": "^\\s*(-(upper|lower|naming|turn_around))\\b",
+          "name": "keyword.other.format.pickapath"
+        }
+      ]
+    },
+    "save-load": {
+      "patterns": [
+        {
+          "match": "^\\s*(-(save_checkpoint|load_checkpoint|save_vars|snapshot))\\b",
+          "name": "keyword.other.save.pickapath"
+        }
+      ]
+    },
+    "expressions": {
+      "patterns": [
+        { "include": "#interpolation" },
+        { "include": "#strings" },
+        { "include": "#numbers" },
+        { "name": "constant.language.boolean.pickapath", "match": "\\b(true|false|True|False)\\b" },
+        { "include": "#math-functions-inline" },
+        { "name": "keyword.operator.pickapath", "match": "(==|!=|<=|>=|\\+=|-=|\\*=|/=|\\+|-|\\*|/|%|<|>|=)" },
+        { "name": "variable.other.pickapath", "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b" }
+      ]
+    },
+    "math-functions-inline": {
+      "name": "support.function.pickapath",
+      "match": "\\b(avg|percent|top|clamp|unique|count|exists|is_empty|min|max|sum_list|median|stddev|rand_choice|rand_int|round_to|floor|ceil|between|repeat|concat)\\b"
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.pickapath",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [{ "include": "#interpolation" }]
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.pickapath",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    "stats-commands": {
+      "patterns": [
+        {
+          "match": "^\\s*(-(stat_header|stat_row|stat_break|stat_bar))\\b",
+          "name": "keyword.control.stats.pickapath"
+        }
+      ]
+    }
+  }
+}

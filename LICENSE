@@ -1,0 +1,124 @@
+**PICK A PATH**
+
+**Pick-A-Path Public License**
+
+_The terms governing use, modification, and distribution of the Pick A Path Engine._
+
+Version 1.0 - Last Updated: April 2026
+
+# **Pick-A-Path Public License v1.0**
+
+**Plain-Language Summary**
+
+_You may use the Engine free of charge to write and share stories non-commercially. You keep all rights to your stories. The Engine's code belongs to the Licensor. If you want to sell your work or use the Engine commercially, you need a separate written agreement. Bug fixes or improvements you make to the Engine must be offered back to the Licensor on request, within 60 days._
+
+This Pick-A-Path Public License ("License") is a legal agreement between you ("Licensee") and Diego Millan ("Licensor"). By downloading, installing, accessing, or using the Pick A Path Engine, its associated tools, compilers, runtime, or scripting language (collectively, the "Software"), you agree to be bound by the terms of this License.
+
+## **Section 1 - Grant of License**
+
+Subject to full compliance with the terms of this License, the Licensor grants you a worldwide, non-exclusive, non-transferable, royalty-free license to:
+
+- Use: Install and run the Software for personal, educational, or non-commercial story development.
+- Modify: Create modifications of the Software ("Forks") for your own personal use, provided that Forks are not distributed except as permitted under Section 3.
+- Distribute (Non-Commercial): Share the Software as a component of a non-commercial story package, provided: (a) this License is included in full and unmodified; (b) you clearly identify any modifications you have made; and (c) no fee or commercial consideration is charged for the Software component.
+
+## **Section 2 - Restrictions**
+
+### **2.1 No Commercial Use Without Agreement**
+
+You may NOT use the Software, its source code, its custom scripting syntax, compiled output, or any Derivative Works for Commercial Purposes without a separate, prior, written Commercial Rights Agreement signed by the Licensor.
+
+"Commercial Purposes" means any activity from which you or a third party derives financial consideration, including but not limited to:
+
+- Selling the Software itself or access to it.
+- Distributing stories that users must pay to access.
+- Including the Software or stories in any paid subscription service.
+- Publishing on commercial storefronts (Steam, Apple App Store, Google Play Store, itch.io paid tier, or any equivalent platform).
+- Displaying advertising within stories or in the Software interface.
+- Using the Software as a component of any commercial product or service offering.
+
+### **2.2 No Sub-Licensing**
+
+You may not sublicense, sell, rent, lease, or transfer any rights granted under this License to any third party.
+
+### **2.3 No Misrepresentation**
+
+You may not use the Pick A Path name, branding, or trademarks to imply official endorsement, partnership, or affiliation without prior written consent from the Licensor.
+
+### **2.4 No Circumvention**
+
+You may not use the Software to develop a competing engine, tool, or platform that replicates the core functionality of the Pick A Path Engine or its scripting language, whether for commercial or non-commercial purposes.
+
+## **Section 3 - Intellectual Property**
+
+### **3.1 The Engine**
+
+All rights, title, and interest in and to the Software - including its source code, object code, documentation, custom scripting language syntax, runtime, compiler, and all Derivative Works created by the Licensor - are and shall remain the exclusive property of the Licensor. This License does not convey any ownership rights to you.
+
+### **3.2 Your Stories**
+
+You retain full ownership and copyright in the narrative content you create using the Software: the text, story structure, world-building, characters, and dialogue of your stories. Nothing in this License restricts your rights to the creative content of your stories, except that: (a) the functional code and runtime components required to execute those stories remain subject to this License; and (b) commercial distribution of stories requires a Commercial Rights Agreement as specified in Section 2.
+
+### **3.3 Derivative Works of the Engine**
+
+Any modifications, improvements, or extensions you make to the Software code itself ("Engine Derivatives") are subject to the Share-Back Clause in Section 4. Engine Derivatives may not be distributed independently or as part of a separate product without the Licensor's written consent.
+
+## **Section 4 - Share-Back Clause**
+
+If you modify the core Software code - including but not limited to the parser, runtime engine, compiler, scripting language interpreter, or associated tooling - you agree to the following:
+
+- Offer-Back: You must make your Engine Derivative available to the Licensor in source code form within 60 days of a written request from the Licensor.
+- Format: Engine Derivatives must be provided in a format reasonably accessible and usable by the Licensor (e.g., as a Git patch, pull request, or archive of modified source files with clear documentation of changes).
+- License Grant: By providing Engine Derivatives, you grant the Licensor a non-exclusive, perpetual, irrevocable, royalty-free license to use, reproduce, modify, and incorporate those Engine Derivatives into the official Pick A Path Software and any derivative version thereof.
+- No Obligation to Incorporate: The Licensor is under no obligation to incorporate any submitted Engine Derivatives into the official Software.
+- Retention of Your Rights: This clause does not affect your ownership of Engine Derivatives that are not incorporated into the official Software. You remain free to use your Engine Derivatives under the terms of this License.
+
+## **Section 5 - Attribution**
+
+Any non-commercial distribution of the Software or story packages that incorporate the Software must include clear attribution to the Pick A Path Engine in documentation or credits, in the form: "Powered by the Pick A Path Engine by Diego Millan."
+
+## **Section 6 - Termination**
+
+### **6.1 Automatic Termination**
+
+This License and all rights granted hereunder terminate automatically and without notice if you fail to comply with any term of this License. Upon termination, you must immediately cease all use, distribution, and hosting of the Software and any story packages that incorporate it.
+
+### **6.2 Reinstatement**
+
+Terminated rights may be reinstated only by written agreement with the Licensor. The Licensor has no obligation to reinstate your rights.
+
+### **6.3 Survival**
+
+Sections 2 (Restrictions), 3 (Intellectual Property), 7 (Disclaimer), 8 (Limitation of Liability), and 9 (General) survive termination of this License.
+
+## **Section 7 - Disclaimer of Warranties**
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE SOFTWARE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. YOU ASSUME ALL RISKS ASSOCIATED WITH YOUR USE OF THE SOFTWARE.
+
+## **Section 8 - Limitation of Liability**
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE DAMAGES - INCLUDING LOSS OF DATA, REVENUE, GOODWILL, OR BUSINESS OPPORTUNITY - ARISING OUT OF OR RELATED TO THIS LICENSE OR YOUR USE OF THE SOFTWARE, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+## **Section 9 - General**
+
+### **9.1 Entire Agreement**
+
+This License constitutes the entire agreement between you and the Licensor with respect to the Software and supersedes all prior agreements, representations, and understandings.
+
+### **9.2 Severability**
+
+If any provision of this License is held to be unenforceable or invalid, that provision will be enforced to the maximum extent permissible, and the remaining provisions will continue in full force.
+
+### **9.3 Governing Law**
+
+This License shall be governed by the laws of the Republic of Argentina. Any disputes arising under this License shall be resolved in the courts of Buenos Aires, Argentina.
+
+### **9.4 Amendments**
+
+The Licensor reserves the right to release updated versions of this License. Continued use of the Software after such release constitutes acceptance of the updated License. Prior versions continue to govern story packages distributed under them unless you elect to adopt the new version.
+
+### **9.5 No Waiver**
+
+Failure by the Licensor to enforce any right under this License does not constitute a waiver of that right.
+
+_For licensing inquiries, Commercial Rights Agreements, or questions: support@pickapathgames.com_
