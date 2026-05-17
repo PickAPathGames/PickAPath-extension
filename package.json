@@ -2,7 +2,7 @@
   "name": "pickapath-syntax",
   "displayName": "PickaPath",
   "description": "Syntax highlighting and validation for PickaPath interactive fiction",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "SEE LICENSE IN LICENSE",
   "publisher": "PickAPath",
   "icon": "icon.png",
