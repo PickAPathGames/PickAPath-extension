@@ -224,7 +224,7 @@
     "variables-logic": {
       "patterns": [
         {
-          "begin": "^\\s*(-(var|mvar|tvar|entropy|user_input|winner|looser|middle|average|range))\\b",
+          "begin": "^\\s*(-(var|mvar|tvar|entropy|user_input|winner|loser|middle|average|range))\\b",
           "beginCaptures": {
             "1": { "name": "keyword.control.variables.pickapath" }
           },
