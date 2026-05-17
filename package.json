@@ -2,12 +2,12 @@
   "name": "pickapath-syntax",
   "displayName": "PickaPath",
   "description": "Syntax highlighting and validation for PickaPath interactive fiction",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "SEE LICENSE IN LICENSE",
   "publisher": "PickAPath",
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.120.0"
+    "vscode": "^1.110.0"
   },
   "categories": [
     "Programming Languages"
@@ -77,7 +77,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
-    "@types/vscode": "^1.120.0",
+    "@types/vscode": "^1.110.0",
     "@vscode/test-electron": "^2.5.2",
     "typescript": "^5.3.3"
   }
